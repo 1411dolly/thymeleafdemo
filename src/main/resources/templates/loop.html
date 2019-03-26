@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="applicationTemplate::head">
+
+</head>
+<body th:with="var=${({1,2,3})}">
+
+<table>
+    <tr th:each="i:${var}">
+        <td th:text="${i}"></td>
+    </tr>
+</table>
+
+</body>
+
+<div th:replace="applicationTemplate::footer"></div>
+
+</html>

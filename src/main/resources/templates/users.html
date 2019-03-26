@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="applicationTemplate::head">
+
+</head>
+<body>
+<table>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.firstName}"></td>
+        <td th:text="${user.lastName}"></td>
+    </tr>
+</table>
+
+
+
+
+</body>
+
+<div th:replace="applicationTemplate::footer"></div>
+
+</html>

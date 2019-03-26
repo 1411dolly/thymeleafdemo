@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="applicationTemplate::head">
+
+</head>
+<body>
+
+<label>Competency: </label>
+<select>
+    <option th:value="None">Select One</option>
+    <option th:each="competency : ${T(com.thymeleaf.example.enums.Competency).values()}"
+            th:value="${competency.getValue()}" th:text="${competency.getValue()}"></option>
+</select>
+
+</body>
+</html>
